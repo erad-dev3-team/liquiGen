@@ -1,0 +1,727 @@
+@keyframes open {
+
+	0% {
+			padding:			0;
+			width:				80px;
+			height:				0;
+			left:				0;
+			border:				1px solid white;
+			border-bottom:		0;
+			overflow-y:			hidden;
+		}
+
+
+	30% {
+			width:				103%;
+			left:				-60px;
+			overflow-y:			hidden;
+		}
+
+
+	40% {
+			height:				0;
+			left:				-60px;
+			border:				1px solid white;
+			border-bottom:		0;
+			padding:			0;
+		}
+
+
+	100% {
+			height:				400px;
+			left:				-60px;
+			border:				1px solid white;
+			overflow-y:			hidden;
+			padding:			20px 0 0 -20px;
+		}
+
+
+}
+
+@keyframes close {
+
+	0% {
+
+		width:				103%;
+		height:				400px;
+		left:				-60px;
+		border:				1px solid white;
+		overflow-y:			hidden;
+	
+}
+
+
+	60% {
+
+		height:				0;
+		left:				-60px;
+	
+}
+
+
+	70% {
+
+		width:				103%;
+		left:				-60px;
+		border:				1px solid white;
+	
+}
+
+
+	100% {
+
+		width:				80px;
+		left:				0;
+		border:				1px solid white;
+		border-bottom:		0;
+		overflow-y:			hidden;
+	
+}
+
+	
+
+}
+
+
+
+.unselectable, .unselectable *, ._us_, *, * * {
+
+	/* Safari */
+	-webkit-user-select:	none;
+	/* Firefox */
+	-moz-user-select:		none;
+	/* IE10+/Edge */
+	-ms-user-select:		none;
+	/* Standard */
+	user-select:			none;
+
+}
+
+input, textarea{
+	/* Safari */
+	-webkit-user-select:	text;
+	/* Firefox */
+	-moz-user-select:		text;
+	/* IE10+/Edge */
+	-ms-user-select:		text;
+	/* Standard */
+	user-select:			text;
+}
+
+
+.closebtn,
+.pc_closebtn {
+
+	transition-property:	background;
+	transition-duration:	.3s;
+	float:					right; 
+	width:					20px; 
+	height:					20px; 
+	z-index:				-1;
+	cursor:					pointer; 
+	border:					1px solid white; 
+	text-align:				center; 
+	background:				transparent;
+	color:					yellow; 
+	border-radius:			5px;
+
+}
+
+
+.pc_closebtn {
+
+	position:				relative;
+	top:					-50px;
+	z-index:				1;
+	right:					15px;
+
+}
+
+
+.closebtn:hover,
+.pc_closebtn:hover {
+
+	transition-property:	background;
+	transition-duration:	.6s;
+	background:				rgb(135, 79, 79);
+	height:					20px;
+
+}
+
+
+.precon_prog {
+
+	display:				block;
+	position:				absolute;
+	bottom:					0;
+	left:					-2px;
+	height:					5px;
+	border:					1px solid black;
+	border-bottom:			none;
+	width:					100%;
+	background:				gray;
+
+}
+
+
+.precMainDiv {
+
+	transition-duration:	1s;
+	transition-delay:		.4s;
+	transition-property:	border-radius, 
+							margin,
+							padding;
+
+	position:				relative;
+	margin-top:				0;
+	border:					1px solid white;
+	border-bottom:			0;
+	border-radius:			30px;
+	top:					-7px;
+	left:					0;
+	width:					80px;
+	height:					0;
+	overflow-y:				auto;
+	overflow-x:				hidden;
+	padding-top:			0;
+
+}
+
+
+.precMainDiv_v {
+
+	animation-name:			open;
+	animation-duration:		1s;
+
+	transition-duration:	1s;
+	transition-property:	border-radius, 
+							margin,
+							padding;
+
+	position:				relative;
+	margin-top:				0;
+	border:					1px solid white;
+	border-radius:			3px;
+	top:					-7px;
+	height:					401px;
+	left:					-60px;
+	width:					103%;
+	overflow-y:				auto;
+	overflow-x:				hidden;
+	padding-top:			20px;
+
+}
+
+
+.precMainDiv_uc {
+
+	animation-name:			close;
+	animation-direction:	normal;
+	animation-duration:		1s;
+	animation-play-state:	initial;
+}
+
+
+.prec_popout_base {
+
+	transition-duration:	.5s;
+	transition-property:	height;
+
+	display:				block;
+	position:				absolute;
+	margin-bottom:			30px;
+	width:					32px;
+	top:					0;
+	left:					0;
+	overflow:				hidden;
+	cursor:					pointer;
+	background:				rgba(200,20,20,.8);
+	background-repeat:		no-repeat;
+	background-origin:		padding-box;
+	background-position-x:	2px;
+	background-position-y:	2px;
+	background-size:		28px;
+
+}
+
+
+.prec_popout_hide {
+
+	border:					0;
+	position:				relative;
+	transition-duration:	.6s;
+	transition-property:	height;
+	height:					0px;
+
+}
+
+
+.prec_popout {
+
+	border:					1px solid white;
+	
+	transition-duration:	.5s;
+	transition-property:	height;
+	height:					32px;
+
+}
+
+
+
+
+
+.btn_add_pc_holder {
+
+	height:					28px;
+	padding-top:			3px;
+	padding-left:			3px;
+	width:					100%;
+	border-top:				2px solid black;
+	bottom:					0;
+	position:				sticky;
+	background:				linear-gradient(
+								to bottom, 
+								rgba(129,25,29,.7) 0%,
+								rgba(154,32,36,.7) 56%,
+								rgba(173,37,42,.7) 100%
+							); 
+
+}
+
+
+.pc_info_label_big {
+
+	font-family:			'Courier New';
+	font-size:				1.0em;
+	font-weight:			bold;
+
+}
+
+
+.pcc {
+
+	position:				relative;
+	left:					90px;
+	bottom:					2px;
+	display:				inline-block;
+	z-index:				10;
+
+}
+
+
+.pcc_label {
+
+	cursor:					pointer;
+	position:				absolute;
+	z-index:				10;
+	background:				inherit;
+	margin-top:				3px;
+
+}
+
+
+.cvs {
+
+	width:					20px;
+	height:					20px;
+
+}
+
+
+.pccs {
+
+	position:				absolute;
+	top:					20px;
+
+}
+
+
+.pc_span_class {
+
+	height:					280px;
+	transition-duration:	0.5s;
+	transition-property:	height;
+	overflow-y:				auto;
+	overflow-x:				hidden;
+	padding:				20px 0 20px 60px;
+	margin:					-80px 0 67px 0;
+	border-bottom:			4px double gray;
+
+}
+
+
+.pc_span_class:first-of-type {
+
+	margin:					0 0 63px 0;
+	padding:				0 0 20px 60px;
+
+}
+
+
+.pccs:hover {
+
+	color:					lightgreen;
+
+}
+
+
+[type='checkbox'] {
+
+	width:					auto;
+	height:					auto;
+
+}
+
+
+[type='radio'] input {
+
+	cursor:					pointer;
+
+}
+
+
+.xml_not {
+
+	display:				none;
+	position:				absolute;
+	margin-left:			-40px;
+	font-family:			Consolas;
+	color:					#FF8;
+	z-index:				0;
+
+}
+
+
+.datadiv {
+
+	border:					1px solid white;
+	border-radius:			12px;
+	position:				relative;
+	float:					left;
+	width:					850px;
+	padding:				10px 10px 10px 80px;
+	margin-bottom:			20px;
+	overflow-y:				hidden;
+	height:					auto;
+
+}
+
+
+.datadiv_o {
+
+	transition-property:	height;
+	transition-duration:	1s;
+	height:					475px !important;
+
+}
+
+
+.datadiv_v {
+
+	transition-property:	height, 
+							padding;
+	transition-duration:	.65s;
+
+	border:					1px solid white;
+	border-radius:			12px;
+	position:				relative;
+	float:					left;
+	width:					850px;
+	padding:				0 10px 0 80px;
+	margin-bottom:			20px;
+	overflow-y:				hidden;
+	height:					0 !important;
+
+}
+
+
+.pc_applicator {
+
+	position:				relative;
+	background:				rgb(100,100,100);
+	background:				rgba(100,100,100,0.3);
+	display:				inline-block; 
+	border:					1px solid white; 
+	padding-left:			20px;
+	padding-right:			20px; 
+	cursor:					pointer; 
+	font-weight:			bold; 
+	border-radius:			3px; 
+	padding-bottom:			3px;
+	margin-bottom:			5px;
+
+}
+
+
+.lbl_other,
+.img_other_opener {
+
+	cursor:					pointer;
+
+}
+
+
+#radioSelectors {
+
+	position:				relative;
+	display:				block;
+	margin-top:				30px;
+	margin-bottom:			0;
+	padding:				0;
+
+}
+
+
+.s_other {
+
+	transition-delay:		0.2s;
+	transition-duration:	0.3s;
+	transition-property:	height;
+	display:				inline-block;
+	padding-left:			20px;
+	height:					0;
+	overflow-y:				hidden;
+	padding-top:			20px;
+
+}
+
+
+.cb_show_other {
+
+	margin-top:				20px;
+	margin-bottom:			-20px;
+
+}
+
+
+.cb_show_other:checked ~ .s_other {
+
+	transition-delay:		0s;
+	transition-duration:	0.3s;
+	transition-property:	height;
+	height:					150px;
+
+}
+
+
+.s_other > input,
+.s_other > label {
+
+	transition-delay:		0s;
+	transition-duration:	0.3s;
+	opacity:				0;
+	position:				absolute;
+	cursor:					pointer;
+
+}
+
+
+.s_other > img {
+
+	transition-duration:	0.3s;
+	opacity:				0;
+	cursor:					pointer;
+
+}
+
+
+.cb_show_other:checked ~ .s_other > input,
+.cb_show_other:checked ~ .s_other > label {
+
+	transition-delay:		0.2s;
+	transition-duration:	0.6s;
+	opacity:				1;
+
+}
+
+
+.cb_show_other:checked ~ .s_other > img {
+
+	transition-duration:	0.6s;
+	opacity:				1;
+
+}
+
+
+.s_other > input {
+
+	margin-left:			50px;
+
+}
+
+
+.radioSep {
+
+	margin-right:			10px;
+
+}
+
+
+.w_cb {
+
+	width:					auto;
+	height:					auto;
+	display:				none;
+
+}
+
+
+.radioLabel {
+
+	font-size:				0.8em;
+	display:				inline-block;
+	width:					220px;
+	cursor:					pointer;
+
+}
+
+
+.s_other_add, 
+.s_other_drop, 
+.s_other_misc {
+
+	transition-duration:	0.5s;
+	transition-property:	height;
+	display:				inline-block;
+	padding-left:			30px;
+	margin-top:				0;
+	margin-bottom:			30px;
+	height:					0;
+	overflow-y:				hidden;
+	z-index:				10;
+
+}
+
+
+.cb_show_other_add,
+.cb_show_other_drop,
+.cb_show_other_misc {
+
+	position:				absolute;
+	z-index:				10;
+
+}
+
+
+.cb_show_other_add:checked	~	.s_other_add, 
+.cb_show_other_drop:checked	~	.s_other_drop, 
+.cb_show_other_misc:checked	~	.s_other_misc {
+
+	transition-duration:	0.5s;
+	transition-property:	height;
+	height:					60px;
+
+}
+
+
+.br40 {
+
+	line-height:			40px;
+
+}
+
+
+.img_other_opener {
+
+	position:				absolute;
+	margin-left:			10px;
+	margin-top:				3px;
+	transition-duration:	0.5s;
+	transform:				rotate(0deg);
+	width:					18px;
+
+}
+
+
+.cb_show_other:checked ~ .img_other_opener {
+
+	transition-duration:	0.5s;
+	transform:				rotate(45deg);
+
+}
+
+
+.img_other_add_opener,
+.img_other_drop_opener,
+.img_other_misc_opener {
+
+	position:				absolute;
+	margin-left:			35px;
+	margin-top:				6px;
+	margin-bottom:			5px;
+	transition-duration:	0.5s;
+	transform:				rotate(0deg);
+	width:					18px;
+
+}
+
+
+.cb_show_other_add:checked ~ .img_other_add_opener,
+.cb_show_other_drop:checked ~ .img_other_drop_opener,
+.cb_show_other_misc:checked ~ .img_other_misc_opener {
+
+	transition-duration:	0.5s;
+	transform:				rotate(-180deg);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+._ {
+
+	background: initial;
+
+}
+
+
+/* Chrome */
+::-webkit-input-placeholder {
+
+	color:					#b1ddeb;
+	opacity:				1;
+	font-weight:			bold;
+
+}
+
+/* IE 10+ */
+:-ms-input-placeholder {
+
+	color:					#b1ddeb;
+	opacity:				1;
+	font-weight:			bold;
+
+}
+
+/* Firefox 19+ */
+::-moz-placeholder {
+
+	color:					#b1ddeb;
+	opacity:				1;
+	font-weight:			bold;
+
+}
+
+/* Firefox 4 - 18 */
+:-moz-placeholder {
+
+	color:					#b1ddeb;
+	opacity:				1;
+	font-weight:			bold;
+
+}

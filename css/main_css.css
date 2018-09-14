@@ -1,0 +1,91 @@
+/*Added some gradients of darker shades to stop the bright red and white burning my eyes out...*/
+
+body, .center {
+	color:							#FFF;
+	font-family:					pluto_sans_light;
+	padding:						0;
+	margin:							0;
+}
+
+.center{
+	position:						relative;
+	display:						block;
+	background-image:				linear-gradient(gray,white);
+	width: 							100%;
+}
+
+.main_table {
+	/*background-color:				#DA0032; */
+	background-image:				linear-gradient(#a01d1d,#DA0032);
+	position: 						relative;
+	color:							#FFF; 
+	border-style:					solid; 
+	border-color:					#000000; 
+	border-radius:					15px; 
+	height:							350px; 
+	width:							50%;
+	width:							50vw;
+	left:							25%;
+	opacity: 						1;
+	
+}
+
+h1 {
+	text-align:						center;
+	color:							#FFF;
+	font-family:					pluto_sans_light;
+}
+
+textarea, input {
+	height:							35px;
+	width:							450px;
+}
+
+input[type='radio'] {
+	width:							auto;
+	height:							auto;
+}
+
+p {
+	font-size:						20px;
+	font-weight:					bold;
+}
+
+a:link, a:visited, a:hover, a:active {
+	color:							#FFF;
+	text-decoration:				none;
+}
+
+
+div.tab {
+	overflow:						hidden;
+	border:							1px solid #CCC;
+	background-color:				#F1F1F1;
+}
+
+div.tab button {
+	background-color:				inherit;
+	float:							left;
+	border:							none;
+	outline:						none;
+	cursor:							pointer;
+	padding:						14px 16px;
+	transition:						0.3s;
+}
+
+div.tab button:hover {
+	background-color:				#DDD;
+}
+
+div.tab .active {
+	background-color:				#CCC;
+}
+
+.tabcontent {
+	display:						none;
+	padding:						6px 12px;
+	border:							0 solid #CCC;
+	border-top:						none;
+} 
+
+

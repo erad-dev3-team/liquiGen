@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+	<meta charset = "utf-8">
+	<title> liquiGen - Help file </title>
+</head>
+<body>
+
+	<h1> liquiGen Használati útmutató </h1>
+	
+	<ol>
+		<li>
+			<p>
+				<strong>
+					Illeszd be az első text-mezőbe az SQL funkció nevét, előtte ponttal szerepeljen a séma neve, a funkció neve után pedig zárójelekben a teljes paraméter lista a paraméterek típusaival!
+				</strong>
+			<p>
+			<p>
+				<strong>Például: </strong>
+				<code>cashmodul.cod_exw_settlement(date,date,character varying,character varying)</code>
+			</p>
+		</li>
+		
+		<li>
+			<p>
+				<strong>
+					Add meg a JIRA felhasználóneved, ez a changeSet-ben fog szerepelni, mint author
+				</strong>
+			</p>
+		</li>
+		
+		<li>
+			<p>
+				<strong>
+					Add meg a JIRA jegyszámot, aminek kapcsán a módosítás készül a changeSet-ben ez lesz a comment
+				</strong>
+			</p>
+		</li>
+		
+		<li>
+			<p>
+				<strong>
+					Ha egyszerre több tárolt eljáráshoz szeretnél liquiBase fájlt készíteni, akkor az első mezőben pontosvesszővel elválasztva sorolhatod fel.
+				</strong>
+			</p>
+		</li>
+	<ol>
+
+</body>
